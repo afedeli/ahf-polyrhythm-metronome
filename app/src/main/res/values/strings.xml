@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MetronomeApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnStart">Start</string>
+    <string name="btnStop">Stop</string>
+    <string name="lblBeatNumPicker">Beats</string>
+    <string name="lblNoteValue">Value</string>
+    <string name="lblBPM">BPM</string>
+    <string name="lblVolume">Volume</string>
+    <string name="currentBeat">Current Beat</string>
+    <string name="lblBeat">Beat:</string>
+
+</resources>

@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MetronomeActivity"
+    android:id="@+id/MetronomeApp"
+    android:background="@android:color/darker_gray">
+
+    <Button
+        android:layout_width="450dp"
+        android:layout_height="65dp"
+        android:text="@string/btnStart"
+        android:id="@+id/btnStartStop"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:layout_alignParentEnd="false"
+        android:textSize="@dimen/abc_text_size_display_2_material"
+        android:textStyle="bold"
+        android:background="@color/button_material_light" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bpmPicker"
+        android:layout_marginBottom="72dp"
+        android:layout_above="@+id/btnStartStop"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="54dp"
+        android:layout_marginEnd="54dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblBPM"
+        android:id="@+id/lblBpm"
+        android:textStyle="bold"
+        android:labelFor="@id/bpmPicker"
+        android:height="@dimen/abc_text_size_display_1_material"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/bpmPicker"
+        android:layout_alignRight="@+id/bpmPicker"
+        android:layout_alignEnd="@+id/bpmPicker"
+        android:singleLine="false" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/beatNumPicker"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/bpmPicker"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblBeatNumPicker"
+        android:id="@+id/lblBeat"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:textStyle="bold"
+        android:height="@dimen/abc_text_size_display_1_material"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/beatNumPicker"
+        android:layout_alignLeft="@+id/beatNumPicker"
+        android:layout_alignStart="@+id/beatNumPicker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewDisplayBeat"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="87dp"
+        android:layout_alignLeft="@+id/lblBeat"
+        android:textStyle="bold"
+        android:textSize="@dimen/abc_text_size_display_2_material"
+        android:gravity="center_vertical|right"
+        android:textColor="@android:color/black"
+        android:background="@android:color/darker_gray"
+        android:layout_alignParentStart="false"
+        android:text="@string/lblBeat"
+        android:singleLine="false"
+        android:layout_toStartOf="@+id/lblVolume"
+        android:layout_alignRight="@+id/lblNoteValue"
+        android:layout_alignEnd="@+id/lblNoteValue"
+        android:paddingRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/abc_text_size_display_3_material"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/currentBeat"
+        android:id="@+id/lblCurrentBeat"
+        android:textStyle="bold"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/viewDisplayBeat"
+        android:layout_alignLeft="@+id/btnStartStop"
+        android:layout_alignStart="@+id/btnStartStop"
+        android:layout_alignRight="@+id/btnStartStop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblNoteValue"
+        android:id="@+id/lblNoteValue"
+        android:textStyle="bold"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:textColor="@android:color/black"
+        android:layout_alignWithParentIfMissing="false"
+        android:singleLine="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignTop="@+id/lblBeat"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/volumeBar"
+        android:clickable="false"
+        android:maxHeight="50dp"
+        android:minHeight="50dp"
+        android:layout_below="@+id/lblCurrentBeat"
+        android:layout_alignLeft="@+id/lblCurrentBeat"
+        android:layout_alignStart="@+id/lblCurrentBeat"
+        android:layout_alignRight="@+id/lblCurrentBeat" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblVolume"
+        android:id="@+id/lblVolume"
+        android:clickable="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingTop="10dp"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/volumeBar"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:id="@+id/noteValueSpinner"
+        android:layout_below="@+id/lblNoteValue"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/lblNoteValue"
+        android:layout_alignRight="@+id/lblNoteValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="1"
+        android:id="@+id/lblBeatNum"
+        android:layout_alignTop="@+id/viewDisplayBeat"
+        android:layout_toRightOf="@+id/viewDisplayBeat"
+        android:layout_above="@+id/lblCurrentBeat"
+        android:layout_alignRight="@+id/lblCurrentBeat"
+        android:layout_alignEnd="@+id/lblCurrentBeat"
+        android:textStyle="bold"
+        android:textSize="@dimen/abc_text_size_display_2_material"
+        android:textColor="#ff00ff00" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/showTripletCalc"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
